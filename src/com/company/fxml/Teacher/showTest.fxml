@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.fxml.Teacher.ShowTestController">
+    <Pane fx:id="answers" layoutX="68.0" layoutY="164.0">
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CheckBox">
+            <font>
+          <Font size="18.0" />
+        </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" layoutY="30.0" text="CheckBox">
+            <font>
+          <Font size="18.0" />
+        </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" layoutY="61.0" text="CheckBox">
+            <font>
+          <Font size="18.0" />
+        </font>
+        </Text>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" layoutY="92.0" text="CheckBox">
+            <font>
+          <Font size="18.0" />
+        </font>
+        </Text>
+    </Pane>
+    <Button fx:id="next" layoutX="507.0" layoutY="340.0" mnemonicParsing="false" onAction="#onNext" text="Далее" />
+    <Text layoutX="42.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тест: ">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Text>
+    <Text fx:id="testName" layoutX="106.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="261.932861328125">
+        <font>
+          <Font size="24.0" />
+        </font>
+    </Text>
+    <Text layoutX="38.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вопрос:">
+        <font>
+          <Font size="18.0" />
+        </font>
+    </Text>
+    <Text fx:id="qText" layoutX="38.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0">
+        <font>
+          <Font size="14.0" />
+        </font>
+    </Text>
+</AnchorPane>

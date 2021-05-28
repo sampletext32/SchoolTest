@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.fxml.Admin.ShowClassesResultController">
+    <Text layoutX="34.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Класс:" />
+    <Text fx:id="classesName" layoutX="85.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <TableView fx:id="table" layoutX="34.0" layoutY="63.0" prefHeight="321.0" prefWidth="532.0">
+      <columns>
+          <TableColumn fx:id="tID" prefWidth="31.462188720703125" text="ID" />
+          <TableColumn fx:id="tLearnerName" prefWidth="238.78992462158203" text="ФИО ученика" />
+          <TableColumn fx:id="tTestName" prefWidth="170.218505859375" text="Название теста" />
+          <TableColumn fx:id="tResult" prefWidth="89.5462646484375" text="Результат (%)" />
+      </columns>
+    </TableView>
+    <Button fx:id="goBack" layoutX="512.0" layoutY="20.0" mnemonicParsing="false" onAction="#onGoBack" text="Назад" />
+</AnchorPane>
