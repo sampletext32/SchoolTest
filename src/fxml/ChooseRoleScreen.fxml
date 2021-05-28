@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Separator?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.ChooseRoleScreen"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox prefHeight="400" alignment="CENTER">
+        <HBox alignment="CENTER" prefWidth="600">
+            <Button alignment="CENTER" onAction="#onButtonSignInAsAdminClick" prefWidth="170" prefHeight="50"
+                    text="Войти как администратор"/>
+
+            <HBox prefWidth="10"/>
+
+            <Button alignment="CENTER" onAction="#onButtonSignInAsTeacherClick" prefWidth="150" prefHeight="50"
+                    text="Войти как учитель"/>
+
+            <HBox prefWidth="10"/>
+
+            <Button alignment="CENTER" onAction="#onButtonSignInAsStudentClick" prefWidth="150" prefHeight="50"
+                    text="Войти как ученик"/>
+        </HBox>
+    </VBox>
+</AnchorPane>
