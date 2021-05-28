@@ -1,4 +1,4 @@
-package com.kvazark;
+package main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -7,15 +7,26 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/Auth/LoginScreen.fxml"));
-        primaryStage.setTitle("Авторизация");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
-    }
-    public static void main(String[] args) throws Exception {
-        Database database = new Database("root", "root");
+    public static void main(String[] args) {
         launch(args);
+    }
+
+    @Override
+    public void init() throws Exception {
+        super.init();
+        Database.connect();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        super.stop();
+        Database.close();
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        FXMLHelper.setPrimaryStage(primaryStage);
+        primaryStage.show();
+        FXMLHelper.loadScreen("ChooseRoleScreen");
     }
 }
