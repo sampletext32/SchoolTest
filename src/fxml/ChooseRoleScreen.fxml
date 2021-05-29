@@ -5,6 +5,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controllers.ChooseRoleScreen"
@@ -24,5 +26,21 @@
             <Button alignment="CENTER" onAction="#onButtonSignInAsStudentClick" prefWidth="150" prefHeight="50"
                     text="Войти как ученик"/>
         </HBox>
+        <Label alignment="CENTER" prefWidth="230" text="">
+            <font>
+                <Font size="30.0"/>
+            </font>
+        </Label>
+        <VBox alignment="CENTER_RIGHT" prefWidth="220"/>
+        <Button alignment="CENTER" onAction="#onButtonSignInAsRegistrationClick" layoutX="70.0" layoutY="258.0" prefWidth="180.0" mnemonicParsing="false"
+                 text="Зарегистрироваться">
+            <font>
+                <Font size="13.0"/>
+            </font>
+        </Button>
     </VBox>
+    <HBox alignment="CENTER">
+
+
+    </HBox>
 </AnchorPane>

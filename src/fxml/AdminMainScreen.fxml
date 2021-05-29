@@ -29,7 +29,7 @@
         <HBox alignment="CENTER">
             <Label alignment="CENTER" prefWidth="230" text="Операции">
                 <font>
-                    <Font size="25.0"/>
+                    <Font size="20.0"/>
                 </font>
             </Label>
         </HBox>

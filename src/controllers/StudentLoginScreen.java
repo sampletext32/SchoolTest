@@ -6,9 +6,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import main.Database;
 import main.FXMLHelper;
-import models.AdminAccount;
-
-public class AdminLoginScreen {
+import models.StudentAccount;
+public class StudentLoginScreen {
     public TextField textFieldLogin;
     public PasswordField passwordField;
 
@@ -27,20 +26,20 @@ public class AdminLoginScreen {
             return;
         }
 
-        AdminAccount adminAccount = Database.getAdminByLoginAndPassword(login, password);
+        StudentAccount studentAccount = Database.getStudentByLoginAndPassword(login, password);
 
-        if (adminAccount == null) {
+        if (studentAccount == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("LogIn Failed");
             alert.setHeaderText("Unable to Log In");
-            alert.setContentText("Admin not found");
+            alert.setContentText("Student not found");
             alert.showAndWait();
             return;
         }
 
-        AdminAccount.LoggedAccount = adminAccount;
+        StudentAccount.LoggedAccount = studentAccount;
 
-        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("AdminMainScreen");
+        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("StudentMainScreen");
         adminMainScreen.preload(5);
     }
 }

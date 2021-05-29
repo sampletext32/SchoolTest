@@ -24,7 +24,6 @@ public class AdminMainScreen implements FXMLHelper.PreloadableController {
 
     @Override
     public <T> void preload(T... objects) {
-
         teachers = Database.selectTeachers();
 
         columnId.setCellValueFactory(param -> new SimpleStringProperty(Integer.toString(param.getValue().getId())));

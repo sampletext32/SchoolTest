@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.TeacherLoginScreen"
+            prefHeight="400.0" prefWidth="600.0">
+    <HBox alignment="CENTER" prefWidth="600">
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="460.0">
+
+            <Separator/>
+
+            <HBox alignment="CENTER">
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                    <Label alignment="CENTER" prefWidth="150" text="Логин"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_LEFT" prefWidth="150">
+                    <TextField fx:id="textFieldLogin" alignment="CENTER" prefWidth="150"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+            </HBox>
+
+            <Separator/>
+
+            <HBox alignment="CENTER">
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                    <Label alignment="CENTER" prefWidth="150" text="Пароль"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_LEFT" prefWidth="150">
+                    <PasswordField fx:id="passwordField" alignment="CENTER" prefWidth="150"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+            </HBox>
+
+            <Separator/>
+
+            <HBox prefHeight="25"/>
+
+            <Separator/>
+
+            <HBox alignment="CENTER_RIGHT">
+                <VBox alignment="CENTER_RIGHT" prefWidth="150"/>
+                <VBox alignment="CENTER_LEFT" prefWidth="150">
+                    <Button alignment="CENTER" onAction="#onButtonSignInClick" prefWidth="150" text="Вход"/>
+                </VBox>
+            </HBox>
+
+            <Separator/>
+
+        </VBox>
+    </HBox>
+</AnchorPane>

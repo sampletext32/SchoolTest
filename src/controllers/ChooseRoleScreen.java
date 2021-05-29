@@ -13,4 +13,6 @@ public class ChooseRoleScreen {
 
     public void onButtonSignInAsStudentClick(ActionEvent actionEvent) {
     }
+    public void onButtonSignInAsRegistrationClick (ActionEvent actionEvent){
+    }
 }

@@ -1,14 +1,13 @@
 package controllers;
-
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import main.Database;
 import main.FXMLHelper;
-import models.AdminAccount;
+import models.TeacherAccount;
 
-public class AdminLoginScreen {
+public class TeacherLoginScreen {
     public TextField textFieldLogin;
     public PasswordField passwordField;
 
@@ -27,20 +26,21 @@ public class AdminLoginScreen {
             return;
         }
 
-        AdminAccount adminAccount = Database.getAdminByLoginAndPassword(login, password);
+        TeacherAccount teacherAccount = Database.getTeacherByLoginAndPassword(login, password);
 
-        if (adminAccount == null) {
+        if (teacherAccount == null) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("LogIn Failed");
             alert.setHeaderText("Unable to Log In");
-            alert.setContentText("Admin not found");
+            alert.setContentText("Teacher not found");
             alert.showAndWait();
             return;
         }
 
-        AdminAccount.LoggedAccount = adminAccount;
+        TeacherAccount.LoggedAccount = teacherAccount;
 
-        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("AdminMainScreen");
+        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("TeacherMainScreen");
         adminMainScreen.preload(5);
     }
 }
+
