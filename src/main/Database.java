@@ -1,7 +1,9 @@
 package main;
 
 import models.AdminAccount;
+import models.StudentAccount;
 import models.TeacherAccount;
+import models.Test;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -65,6 +67,78 @@ public class Database {
         return teacherAccounts;
     }
 
+    public static TeacherAccount getTeacherByLoginAndPassword(String login, String password) {
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery(String.format("SELECT * FROM schooltest.teacheraccounts WHERE login='%s' AND password='%s'", login, password));
+            TeacherAccount teacherAccount = null;
+            if (results.next()) {
+                int db_id = results.getInt("id");
+                String db_login = results.getString("login");
+                String db_pass = results.getString("password");
+                String db_username = results.getString("username");
+                teacherAccount = new TeacherAccount(db_id, db_login, db_pass, db_username);
+            }
+            statement.close();
+            return teacherAccount;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static StudentAccount getStudentByLoginAndPassword(String login, String password) {
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery(String.format("SELECT * FROM schooltest.studentaccounts WHERE login='%s' AND password='%s'", login, password));
+            StudentAccount studentAccount = null;
+            if (results.next()) {
+                int db_id = results.getInt("id");
+                String db_login = results.getString("login");
+                String db_pass = results.getString("password");
+                String db_username = results.getString("username");
+                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username);
+            }
+            statement.close();
+            return studentAccount;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static StudentAccount getStudentByLogin(String login) {
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery(String.format("SELECT * FROM schooltest.studentaccounts WHERE login='%s'", login));
+            StudentAccount studentAccount = null;
+            if (results.next()) {
+                int db_id = results.getInt("id");
+                String db_login = results.getString("login");
+                String db_pass = results.getString("password");
+                String db_username = results.getString("username");
+                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username);
+            }
+            statement.close();
+            return studentAccount;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static void addStudent(StudentAccount studentAccount) {
+        try {
+            Statement statement = connection.createStatement();
+            statement.execute(String.format(
+                    "INSERT INTO schooltest.studentaccounts (login, password, username) VALUES ('%s', '%s', '%s')",
+                    studentAccount.getLogin(), studentAccount.getPassword(), studentAccount.getUsername())
+            );
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void close() {
         if (initiated) {
@@ -74,5 +148,9 @@ public class Database {
                 e.printStackTrace();
             }
         }
+    }
+
+    public static List<Test> selectAllTests() {
+        return null;
     }
 }

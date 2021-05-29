@@ -9,10 +9,10 @@ public class ChooseRoleScreen {
     }
 
     public void onButtonSignInAsTeacherClick(ActionEvent actionEvent) {
+        FXMLHelper.loadScreen("TeacherLoginScreen");
     }
 
     public void onButtonSignInAsStudentClick(ActionEvent actionEvent) {
-    }
-    public void onButtonSignInAsRegistrationClick (ActionEvent actionEvent){
+        FXMLHelper.loadScreen("StudentLoginScreen");
     }
 }
