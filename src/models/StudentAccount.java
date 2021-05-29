@@ -1,6 +1,8 @@
 package models;
 
 public class StudentAccount {
+    public static StudentAccount LoggedAccount;
+
     private int id;
     private String login;
     private String password;

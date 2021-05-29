@@ -1,6 +1,8 @@
 package models;
 
 public class TeacherAccount {
+    public static TeacherAccount LoggedAccount;
+
     private int id;
     private String login;
     private String password;

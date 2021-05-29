@@ -1,4 +1,5 @@
 package controllers;
+
 import javafx.event.ActionEvent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -39,8 +40,8 @@ public class TeacherLoginScreen {
 
         TeacherAccount.LoggedAccount = teacherAccount;
 
-        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("TeacherMainScreen");
-        adminMainScreen.preload(5);
+        TeacherMainScreen teacherMainScreen = FXMLHelper.loadScreenReturnController("TeacherMainScreen");
+        teacherMainScreen.preload();
     }
 }
 

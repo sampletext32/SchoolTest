@@ -7,6 +7,7 @@ import javafx.scene.control.TextField;
 import main.Database;
 import main.FXMLHelper;
 import models.StudentAccount;
+
 public class StudentLoginScreen {
     public TextField textFieldLogin;
     public PasswordField passwordField;
@@ -39,7 +40,10 @@ public class StudentLoginScreen {
 
         StudentAccount.LoggedAccount = studentAccount;
 
-        AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("StudentMainScreen");
-        adminMainScreen.preload(5);
+        FXMLHelper.loadScreenReturnController("StudentMainScreen");
+    }
+
+    public void onButtonRegisterClick(ActionEvent actionEvent) {
+        FXMLHelper.loadScreen("StudentRegisterScreen");
     }
 }
