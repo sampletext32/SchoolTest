@@ -7,12 +7,14 @@ public class StudentAccount {
     private String login;
     private String password;
     private String username;
+    private String className;
 
-    public StudentAccount(int id, String login, String password, String username) {
+    public StudentAccount(int id, String login, String password, String username, String className) {
         this.id = id;
         this.login = login;
         this.password = password;
         this.username = username;
+        this.className = className;
     }
 
     public int getId() {
@@ -45,5 +47,13 @@ public class StudentAccount {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
     }
 }

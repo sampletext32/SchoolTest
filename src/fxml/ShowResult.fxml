@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.ShowResult"
+            prefHeight="400.0" prefWidth="600.0">
+    <Text layoutX="34.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Класс:" />
+    <Text fx:id="className" layoutX="85.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <TableView fx:id="table" layoutX="34.0" layoutY="63.0" prefHeight="321.0" prefWidth="532.0">
+        <columns>
+            <TableColumn fx:id="tID" prefWidth="31.462188720703125" text="ID" />
+            <TableColumn fx:id="tStudentName" prefWidth="238" text="ФИО ученика" />
+            <TableColumn fx:id="tTestName" prefWidth="170" text="Название теста" />
+            <TableColumn fx:id="tResult" prefWidth="89" text="Результат (%)" />
+        </columns>
+    </TableView>
+    <Button fx:id="goBack" layoutX="512.0" layoutY="20.0" mnemonicParsing="false" onAction="#onGoBack" text="Назад" />
+</AnchorPane>

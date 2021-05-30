@@ -63,8 +63,8 @@
 
             <HBox alignment="CENTER_RIGHT" prefWidth="600">
                 <Button alignment="CENTER" onAction="#onButtonRegisterClick"
-                        prefWidth="180.0"
-                        prefHeight="40"
+                        prefWidth="150.0"
+                        prefHeight="25"
                         text="Зарегистрироваться">
                 </Button>
             </HBox>

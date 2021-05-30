@@ -57,6 +57,20 @@
 
             <Separator/>
 
+            <HBox alignment="CENTER">
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_RIGHT" prefWidth="150">
+                    <Label alignment="CENTER" prefWidth="150" text="Класс"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER_LEFT" prefWidth="150">
+                    <TextField fx:id="textFieldClassName" alignment="CENTER" prefWidth="150"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+            </HBox>
+
+            <Separator/>
+
             <HBox prefHeight="25"/>
 
             <Separator/>

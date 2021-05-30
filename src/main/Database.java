@@ -1,9 +1,6 @@
 package main;
 
-import models.AdminAccount;
-import models.StudentAccount;
-import models.TeacherAccount;
-import models.Test;
+import models.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -97,7 +94,8 @@ public class Database {
                 String db_login = results.getString("login");
                 String db_pass = results.getString("password");
                 String db_username = results.getString("username");
-                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username);
+                String db_classname = results.getString("class_name");
+                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username, db_classname);
             }
             statement.close();
             return studentAccount;
@@ -117,7 +115,8 @@ public class Database {
                 String db_login = results.getString("login");
                 String db_pass = results.getString("password");
                 String db_username = results.getString("username");
-                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username);
+                String db_classname = results.getString("class_name");
+                studentAccount = new StudentAccount(db_id, db_login, db_pass, db_username, db_classname);
             }
             statement.close();
             return studentAccount;
@@ -153,4 +152,6 @@ public class Database {
     public static List<Test> selectAllTests() {
         return null;
     }
+
+    public static List<Question> selectQuestion() {return null;}
 }

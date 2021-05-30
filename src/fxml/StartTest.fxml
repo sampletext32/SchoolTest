@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.StartTest"
+            prefHeight="400.0" prefWidth="600.0">
+    <Pane fx:id="checks" layoutX="68.0" layoutY="164.0">
+        <CheckBox mnemonicParsing="false" text="CheckBox" />
+        <CheckBox layoutY="30.0" mnemonicParsing="false" text="CheckBox" />
+        <CheckBox layoutY="61.0" mnemonicParsing="false" text="CheckBox" />
+        <CheckBox layoutY="92.0" mnemonicParsing="false" text="CheckBox" />
+    </Pane>
+    <Button fx:id="next" layoutX="507.0" layoutY="340.0" mnemonicParsing="false" onAction="#onNext" text="Далее" />
+    <Text layoutX="42.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Тест: ">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Text>
+    <Text fx:id="test_title" layoutX="106.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="261.932861328125">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Text>
+    <Text layoutX="38.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вопрос:">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <Text fx:id="quesyion_text" layoutX="38.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Text>
+    <Text fx:id="error" fill="RED" layoutX="71.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+</AnchorPane>

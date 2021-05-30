@@ -12,11 +12,13 @@ public class StudentRegisterScreen {
     public TextField textFieldLogin;
     public PasswordField passwordField;
     public TextField textFieldUsername;
+    public TextField textFieldClassName;
 
     public void onButtonSignInClick(ActionEvent actionEvent) {
         String login = textFieldLogin.getText();
         String password = passwordField.getText();
         String username = textFieldUsername.getText();
+        String classname = textFieldClassName.getText();
 
         if (login.trim().length() == 0 || password.trim().length() == 0 || username.trim().length() == 0) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -41,7 +43,7 @@ public class StudentRegisterScreen {
             return;
         }
 
-        StudentAccount studentAccount = new StudentAccount(0, login, password, username);
+        StudentAccount studentAccount = new StudentAccount(0, login, password, username, classname);
 
         Database.addStudent(studentAccount);
 

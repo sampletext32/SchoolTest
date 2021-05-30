@@ -1,5 +1,8 @@
 package models;
 
+import javafx.beans.property.SimpleStringProperty;
+import main.Database;
+
 public class Test {
     private int id;
     private String title;
@@ -9,8 +12,6 @@ public class Test {
         this.title = title;
     }
 
-    public Test() {
-    }
 
     public int getId() {
         return id;
