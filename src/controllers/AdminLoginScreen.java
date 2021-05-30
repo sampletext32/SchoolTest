@@ -41,6 +41,6 @@ public class AdminLoginScreen {
         AdminAccount.LoggedAccount = adminAccount;
 
         AdminMainScreen adminMainScreen = FXMLHelper.loadScreenReturnController("AdminMainScreen");
-        adminMainScreen.preload(5);
+        adminMainScreen.preload();
     }
 }

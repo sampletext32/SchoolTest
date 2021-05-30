@@ -140,6 +140,9 @@ public class Database {
     }
 
     public static void close() {
+
+        // SELECT * FROM questions LEFT JOIN answers ON questions.answerid = answers.id
+
         if (initiated) {
             try {
                 connection.close();

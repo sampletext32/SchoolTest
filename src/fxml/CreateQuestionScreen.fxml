@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateQuestionScreen">
+    <HBox alignment="CENTER" prefWidth="600">
+        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="460.0">
+            <TextField fx:id="textFieldQuestionTitle" alignment="CENTER" prefHeight="40" prefWidth="436.0"
+                       promptText="Введите текст вопроса"/>
+            <VBox prefHeight="15"/>
+            <HBox alignment="CENTER_LEFT">
+                <RadioButton mnemonicParsing="false" fx:id="radioButtonAnswer1"/>
+                <HBox prefWidth="10"/>
+                <TextField fx:id="textFieldAnswer1" prefHeight="25.0" prefWidth="281.0" promptText="Введите вариант ответа"/>
+            </HBox>
+            <VBox prefHeight="5"/>
+            <HBox alignment="CENTER_LEFT">
+                <RadioButton mnemonicParsing="false" fx:id="radioButtonAnswer2"/>
+                <HBox prefWidth="10"/>
+                <TextField fx:id="textFieldAnswer2" prefHeight="25.0" prefWidth="281.0" promptText="Введите вариант ответа"/>
+            </HBox>
+            <VBox prefHeight="5"/>
+            <HBox alignment="CENTER_LEFT">
+                <RadioButton mnemonicParsing="false" fx:id="radioButtonAnswer3"/>
+                <HBox prefWidth="10"/>
+                <TextField fx:id="textFieldAnswer3" prefHeight="25.0" prefWidth="281.0" promptText="Введите вариант ответа"/>
+            </HBox>
+            <VBox prefHeight="5"/>
+            <HBox alignment="CENTER_LEFT">
+                <RadioButton mnemonicParsing="false" fx:id="radioButtonAnswer4"/>
+                <HBox prefWidth="10"/>
+                <TextField fx:id="textFieldAnswer4" prefHeight="25.0" prefWidth="281.0" promptText="Введите вариант ответа"/>
+            </HBox>
+            <VBox prefHeight="15"/>
+            <HBox alignment="CENTER_RIGHT">
+                <Button prefWidth="120" prefHeight="40" mnemonicParsing="false" onAction="#onButtonSaveClick"
+                        text="Дальше"/>
+            </HBox>
+        </VBox>
+    </HBox>
+</AnchorPane>
